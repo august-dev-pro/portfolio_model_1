@@ -39,7 +39,7 @@ const HomeBanniere = () => {
         <div className="home-banniere-content flex flex-col-reverse gap-[30px] sm:flex-row relative md:max-w-[950px] md:m-[0_auto]">
           <div className="description-part text-center m-[0_auto] sm:m-0 md:text-left flex flex-col gap-[10px] max-w-[410px] sm:max-w-[320px] md:max-w-[390px] lg:max-w-[530px] lg:gap-[20px]">
             <div className="text-[19px] capitalize font-[600] md:text-[20px] lg:text-[22px]">
-              hi, i am augustin selete
+              hi, i am James Field
             </div>
             <div className="text-[25px]  capitalize font-[600] md:text-[35px] lg:text-[43px]">
               junior web / mobile developer

@@ -91,7 +91,7 @@ const Projects = () => {
           </div>
           <div className="projects-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <div className="relative group">
+              <div key={index} className="relative group">
                 <Image
                   src={project.image}
                   alt={project.title}

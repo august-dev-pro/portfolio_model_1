@@ -30,64 +30,35 @@ const Footer = () => {
     },
     {
       title: "About me",
-      path: "/about",
+      path: "#about",
     },
     {
       title: "Projects",
-      path: "/projects",
+      path: "#projects",
     },
     {
       title: "Skills",
-      path: "/skills",
+      path: "#skills",
     },
     {
       title: "pricing",
-      path: "",
+      path: "#",
     },
     {
-      title: "testimonials",
-      path: "",
+      title: "Education",
+      path: "#education",
     },
-    {
-      title: "experiences",
-      path: "",
-    },
-    {
-      title: "blogs",
-      path: "",
-    },
+
     {
       title: "services",
       path: "",
     },
     {
       title: "Contact",
-      path: "/contact",
+      path: "#contact",
     },
   ];
-  const socialLinks = [
-    {
-      title: "facebook",
-      icon: faFacebook,
-    },
-    {
-      title: "linkeding",
-      icon: faLinkedin,
-    },
-    {
-      title: "instagram",
-      icon: faInstagramSquare,
-    },
-    {
-      title: "whatsapp",
-      icon: faWhatsappSquare,
-    },
-    /*    {
-      title: "github",
-      label: "august-dev-pro",
-      icon: faGithub,
-    }, */
-  ];
+
   const activeLinkPathName = usePathname();
   return (
     <footer className="footer text-gray-pink py-[30px] bg-black">
@@ -103,15 +74,15 @@ const Footer = () => {
             <div className="contact_infos font-[300]">
               <div className="item localisation">
                 <FontAwesomeIcon className="icon" icon={faLocationDot} />
-                Cote d'Ivoire, Bondoukou
+                Paris , Marseille 021
               </div>
               <div className="item email">
                 <FontAwesomeIcon className="icon" icon={faEnvelope} />
-                augustinselete01@gmail.com
+                portfoliomodel1@gmail.com
               </div>
               <div className="item phone">
-                <FontAwesomeIcon className="icon" icon={faPhone} /> +225 057 577
-                588 9
+                <FontAwesomeIcon className="icon" icon={faPhone} /> +5 057 577
+                584 588 9
               </div>
             </div>
           </div>
@@ -149,26 +120,6 @@ const Footer = () => {
                 <div className="h-[43px] bg-violet px-[15px] flex items-center rounded-br-[.4rem] rounded-tr-[.4rem]">
                   <FontAwesomeIcon className=" rotate-45" icon={faPaperPlane} />
                 </div>
-              </div>
-              <div className="socialLinks flex gap-[15px]">
-                {socialLinks.map((link: any, index: number) => (
-                  <Link key={index} href={""} className="social-link group">
-                    <FontAwesomeIcon
-                      className=" group-hover:text-violet"
-                      icon={link.icon}
-                    />
-                  </Link>
-                ))}
-                <Link
-                  href={""}
-                  className="group social-link text-[12px] flex items-center gap-[3px]"
-                >
-                  <FontAwesomeIcon
-                    className="text-[12px] group-hover:text-violet"
-                    icon={faGithub}
-                  />
-                  august-dev-pro
-                </Link>
               </div>
             </div>
           </div>
