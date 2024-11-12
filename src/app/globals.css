@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Sora:wght@100..800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  font-family: "Sora", sans-serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: #000000;
+  background-color: #ffffff;
+}
+.icon {
+  max-width: 20px;
+}
+
+@layer utilities {
+  .container {
+    margin: 0 auto;
+  }
+  .section {
+    padding: 44px 0;
+  }
+  .section .section-title {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 25px;
+  }
+  .icon-close {
+    position: relative;
+    width: 30px;
+    height: 30px;
+  }
+
+  .icon-close::before,
+  .icon-close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25px;
+    height: 1px;
+    background-color: #ffffff; /* Changez la couleur ici */
+    transform-origin: center;
+    transition: transform 0.2s ease;
+  }
+
+  .icon-close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .icon-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  .icon-close:hover::before {
+    transform: translate(-50%, -50%) rotate(225deg);
+  }
+
+  .icon-close:hover::after {
+    transform: translate(-50%, -50%) rotate(135deg);
+  }
+
+  /* icon-bars */
+  .bars-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 23px;
+    cursor: pointer;
+  }
+  .bars-icon .bar {
+    width: 100%;
+    height: 1px;
+    padding: 0.5px 0;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    transition: all 0.2s ease;
+  }
+  .barres .bars-icon .bar {
+    background-color: #000000;
+  }
+
+  /* linght-btn */
+  .linght-btn {
+    border: #ffffff solid 1px;
+    padding: 6px 21px;
+    text-transform: capitalize;
+    border-radius: 1rem;
+    transition: all 0.2s ease;
+    font-weight: 700;
+  }
+
+  .linght-btn:hover,
+  .linght-btn-plus:hover {
+    color: #000000;
+    background-color: #ffffff;
+  }
+  /* linght-btn */
+  .linght-btn-plus {
+    border: #ffffff solid 1px;
+    padding: 6px 21px;
+    text-transform: capitalize;
+    border-radius: 1rem;
+    transition: all 0.2s ease;
+  }
+
+  /* nav links */
+  nav .link::after {
+    content: "";
+    padding: 1px;
+    background-color: inherit;
+    width: 1px;
+    transition: all 0.3s ease-in-out;
+  }
+  nav .link:hover::after {
+    background-color: #ffffff;
+    width: 100%;
+  }
+  .barres nav .link:hover::after {
+    background-color: #000000;
+    width: 100%;
+  }
+  nav .link.active-link::after {
+    background-color: #ffffff;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .barres nav .link.active-link::after {
+    background-color: #000000;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .custom-bg-gradient {
+    background: linear-gradient(180deg, #000000 0%, #000000 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative; /* Ensures positioning of children */
+  }
+
+  .wave-background {
+    width: 100%;
+    height: 400px !important; /* Height of the SVG */
+    overflow: hidden;
+    z-index: 0; /* Ensure it is behind content */
+  }
+
+  header,
+  footer {
+    z-index: 2;
+    background: transparent;
+  }
+
+  /* home-banniere */
+  .home-banniere {
+    letter-spacing: 1px;
+  }
+
+  /* footer style */
+  .footer .footer-content {
+  }
+  .footer .footer-content .describe-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  .footer .footer-content .describe-section .contact_infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .footer .footer-content .describe-section .contact_infos .item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-navigation-section .links .link.activelink {
+    background: linear-gradient(to right, #7c3aed, #9914c1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .footer .footer-content .message_send .content .mailAdressInput {
+  }
+  .footer .footer-content .message_send .content .mailAdressInput input {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border: 2px solid #ffffff;
+    border-radius: 0.4rem;
+    padding-left: 8px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    font-weight: 300;
+    color: #595a5c;
+    height: 43px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    min-width: 10px;
+  }
+  .footer .footer-content .message_send .content .mailAdressInput input:focus {
+    border-color: #ab4fca;
+  }
+  .footer .footer-content .message_send .content .socialLinks svg {
+    font-size: 20px;
+    transition: all 0.2s ease;
+  }
+  .footer
+    .footer-content
+    .message_send
+    .content
+    .socialLinks
+    .social-link:hover {
+    background: linear-gradient(to right, #5825c1, #9914c1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .link-gradient {
+    background: linear-gradient(to right, #5825c1, #9914c1);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* styles.css */
+  .gradient-text {
+    background: linear-gradient(to right, #7c3aed, #979797, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .gradient-bar {
+    background: linear-gradient(to right, #000000, #7c3aed, #000000);
+  }
+  @screen sm {
+    .section {
+      padding: 50px 0;
+    }
+  }
+  @screen md {
+    .section {
+      padding: 80px 0;
+    }
+
+    .section .section-title {
+      font-weight: 700;
+      font-size: 30px;
+    }
+    .wave-background {
+      height: 800px !important; /* Adjust height on medium devices */
+    }
+  }
+
+  @screen lg {
+    .wave-background {
+      height: 600px; /* Adjust height on larger devices */
+    }
+  }
+}
