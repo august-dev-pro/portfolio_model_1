@@ -33,6 +33,7 @@ const Header = () => {
     { title: "About me", path: "#about" },
     { title: "Projects", path: "#projects" },
     { title: "Skills", path: "#skills" },
+    { title: "Education", path: "#education" },
     { title: "Contact", path: "#contact" },
   ];
 
